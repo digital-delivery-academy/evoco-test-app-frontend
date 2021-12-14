@@ -10,128 +10,109 @@
   {% set pData = journeyContext['work-impact'] %}
 
   {% set rows = [{
-    key: {
-      text: t('work-impact:moreDifficult.label')
-    },
-    value: {
-      text: pData.moreDifficult
-    },
-    actions: {
-      items: [
-        {
-          href: waypointEditUrl + '#f-moreDifficult',
-          text: t('review:block.changeLink'),
-          visuallyHiddenText: t('work-impact:moreDifficult.label') | lower,
-          classes: 'govuk-link--no-visited-state'
-        }
-      ]
-    }
-  }] %}
-
-  {% if pData.moreDifficult == 'yes' %}
-    {% set rows = (rows.push(
-      {
-        key: {
-          text: t('work-impact:harderHow.label')
-        },
-        value: {
-          text: pData.harderHow
-        },
-        actions: {
-          items: [
-            {
-              href: waypointEditUrl + '#f-harderHow',
-              text: t('review:block.changeLink'),
-              visuallyHiddenText: t('work-impact:harderHow.label') | lower,
-              classes: 'govuk-link--no-visited-state'
-            }
-          ]
-        }
+    {
+      key: {
+        text: t('work-impact:harderHow.label')
       },
-      {
-        key: {
-          text: t('work-impact:getAroundProblems.label')
-        },
-        value: {
-          text: pData.getAroundProblems
-        },
-        actions: {
-          items: [
-            {
-              href: waypointEditUrl + '#f-getAroundProblems',
-              text: t('review:block.changeLink'),
-              visuallyHiddenText: t('work-impact:getAroundProblems.label') | lower,
-              classes: 'govuk-link--no-visited-state'
-            }
-          ]
-        }
-      }
-    ), rows) %}
-    {% if pData.getAroundProblems == 'yes' %}
-      {% set rows = (rows.push(
-        {
-          key: {
-            text: t('work-impact:problemSolutions.label')
-          },
-          value: {
-            text: pData.problemSolutions
-          },
-          actions: {
-            items: [
-              {
-                href: waypointEditUrl + '#f-problemSolutions',
-                text: t('review:block.changeLink'),
-                visuallyHiddenText: t('work-impact:problemSolutions.label') | lower,
-                classes: 'govuk-link--no-visited-state'
-              }
-            ]
+      value: {
+        text: pData.harderHow
+      },
+      actions: {
+        items: [
+          {
+            href: waypointEditUrl + '#f-harderHow',
+            text: t('review:block.changeLink'),
+            visuallyHiddenText: t('work-impact:harderHow.label') | lower,
+            classes: 'govuk-link--no-visited-state'
           }
-        }
-      ), rows) %}
-    {% endif %}
+        ]
+      }
+    },
+    {
+      key: {
+        text: t('work-impact:getAroundProblems.label')
+      },
+      value: {
+        text: pData.getAroundProblems
+      },
+      actions: {
+        items: [
+          {
+            href: waypointEditUrl + '#f-getAroundProblems',
+            text: t('review:block.changeLink'),
+            visuallyHiddenText: t('work-impact:getAroundProblems.label') | lower,
+            classes: 'govuk-link--no-visited-state'
+          }
+        ]
+      }
+    }
+  ), rows) %}
+  {% if pData.getAroundProblems == 'yes' %}
     {% set rows = (rows.push(
       {
         key: {
-          text: t('work-impact:knowWhatWouldHelp.label')
+          text: t('work-impact:problemSolutions.label')
         },
         value: {
-          text: pData.knowWhatWouldHelp
+          text: pData.problemSolutions
         },
         actions: {
           items: [
             {
-              href: waypointEditUrl + '#f-knowWhatWouldHelp',
+              href: waypointEditUrl + '#f-problemSolutions',
               text: t('review:block.changeLink'),
-              visuallyHiddenText: t('work-impact:knowWhatWouldHelp.label') | lower,
+              visuallyHiddenText: t('work-impact:problemSolutions.label') | lower,
               classes: 'govuk-link--no-visited-state'
             }
           ]
         }
       }
     ), rows) %}
-    {% if pData.knowWhatWouldHelp == 'yes' %}
-      {% set rows = (rows.push(
-        {
-          key: {
-            text: t('work-impact:whatWouldHelp.label')
-          },
-          value: {
-            text: pData.whatWouldHelp
-          },
-          actions: {
-            items: [
-              {
-                href: waypointEditUrl + '#f-whatWouldHelp',
-                text: t('review:block.changeLink'),
-                visuallyHiddenText: t('work-impact:whatWouldHelp.label') | lower,
-                classes: 'govuk-link--no-visited-state'
-              }
-            ]
-          }
-        }
-      ), rows) %}
-    {% endif %}
   {% endif %}
+  {% set rows = (rows.push(
+    {
+      key: {
+        text: t('work-impact:knowWhatWouldHelp.label')
+      },
+      value: {
+        text: pData.knowWhatWouldHelp
+      },
+      actions: {
+        items: [
+          {
+            href: waypointEditUrl + '#f-knowWhatWouldHelp',
+            text: t('review:block.changeLink'),
+            visuallyHiddenText: t('work-impact:knowWhatWouldHelp.label') | lower,
+            classes: 'govuk-link--no-visited-state'
+          }
+        ]
+      }
+    }
+  ), rows) %}
+  {% if pData.knowWhatWouldHelp == 'yes' %}
+    {% set rows = (rows.push(
+      {
+        key: {
+          text: t('work-impact:whatWouldHelp.label')
+        },
+        value: {
+          text: pData.whatWouldHelp
+        },
+        actions: {
+          items: [
+            {
+              href: waypointEditUrl + '#f-whatWouldHelp',
+              text: t('review:block.changeLink'),
+              visuallyHiddenText: t('work-impact:whatWouldHelp.label') | lower,
+              classes: 'govuk-link--no-visited-state'
+            }
+          ]
+        }
+      }
+    ), rows) %}
+  {% endif %}
+
+  }] %}
 
   {{ govukSummaryList({
     classes: "govuk-!-margin-bottom-9",

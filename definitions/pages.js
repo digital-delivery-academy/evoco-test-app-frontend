@@ -29,10 +29,10 @@ exports = module.exports = (function() {
     fieldValidators: require('./field-validators/contact-details'),
   };
 
-  pages['secret-agent'] = {
-    view: 'pages/secret-agent.njk',
-    reviewBlockView: 'review-blocks/secret-agent.njk',
-    fieldValidators: require('./field-validators/secret-agent'),
+  pages['yes-no'] = {
+    view: 'pages/yes-no.njk',
+    reviewBlockView: 'review-blocks/yes-no.njk',
+    fieldValidators: require('./field-validators/yes-no'),
   };
 
   pages['work-impact'] = {

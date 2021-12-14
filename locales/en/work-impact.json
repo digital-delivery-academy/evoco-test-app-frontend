@@ -1,13 +1,9 @@
 {
-  "pageTitle": "Work impact",
-  "h1": "Does your situation require assistance?",
+  "pageTitle": "Work impact continued",
+  "h1": "How does your situation make things more difficult?",
   "maxLength": "Give a shorter description (maximum 10,000 characters)",
-  "moreDifficult": {
-    "label": "Does your situation make things more difficult?",
-    "empty": "Please make a selection"
-  },
   "harderHow": {
-    "label": "How is it harder?",
+    "label": "Elaborate on what makes it harder?",
     "empty": "Please provide details"
   },
   "getAroundProblems": {

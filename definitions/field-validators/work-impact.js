@@ -1,16 +1,6 @@
 const { validationRules: r, simpleFieldValidation: sf } = require('@dwp/govuk-casa');
 
 const fieldValidators = {
-  moreDifficult: sf([
-    r.required.make({
-      errorMsg: 'work-impact:moreDifficult.empty'
-    }),
-    r.inArray.make({
-      source: ['yes', 'no'],
-      errorMsg: 'work-impact:moreDifficult.empty'
-    })
-  ]),
-
   harderHow: sf([
     r.required.make({
       errorMsg: 'work-impact:harderHow.empty'

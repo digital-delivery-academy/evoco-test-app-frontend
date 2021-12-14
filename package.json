@@ -1,7 +1,7 @@
 {
-  "name": "@dwp/govuk-casa-example-barebones",
+  "name": "evoco/technical-test",
   "version": "1.0.0",
-  "description": "Simple barebones example CASA application",
+  "description": "Sample frontend for Evoco's technical test",
   "main": "app.js",
   "dependencies": {
     "@dwp/govuk-casa": "^7.0.3",
@@ -12,6 +12,6 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "DWP <open-source@engineering.digital.dwp.gov.uk>",
+  "author": "Sam Waistle <sam.waistle@evoco.co.uk>",
   "license": "ISC"
 }
