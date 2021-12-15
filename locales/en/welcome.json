@@ -2,7 +2,7 @@
   "pageTitle": "Welcome",
   "h1": "Welcome",
   "html": {
-    "body": "<p class=\"govuk-body\">This small application provides a demonstration of the CASA (Collect And Send Application) framework.</p>"
+    "body": "<p class=\"govuk-body\">This small application provides an example frontend service you will be working with.</p> <p class=\"govuk-body\">Your task is to create a test framework pack that covers a regression for this service.</p> <p class=\"govuk-body\">Preferred languages:</p> <ul class=\"govuk-body\"><li>Javascript</li><li>Java</li><li>Python</li></ul>"
   },
   "btn": "Get Started"
 }

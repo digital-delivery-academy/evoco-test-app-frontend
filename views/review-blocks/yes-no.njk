@@ -3,28 +3,28 @@
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {% block pageBlockTitle %}
-  {{ t('secret-agent:h1') }}
+  {{ t('yes-no:h1') }}
 {% endblock %}
 
 {% block reviewBlock %}
-  {% set pData = journeyContext['secret-agent'] %}
+  {% set pData = journeyContext['yes-no'] %}
 
   {{ govukSummaryList({
     classes: "govuk-!-margin-bottom-9",
     rows: [
       {
         key: {
-          text: t('secret-agent:field.license.label')
+          text: t('yes-no:moreDifficult.label')
         },
         value: {
-          text: pData.license
+          text: pData.moreDifficult
         },
         actions: {
           items: [
             {
-              href: waypointEditUrl + '#f-license',
+              href: waypointEditUrl + '#f-moreDifficult',
               text: t('review:block.changeLink'),
-              visuallyHiddenText: t('secret-agent:field.license.label') | lower,
+              visuallyHiddenText: t('yes-no:moreDifficult.label') | lower,
               classes: 'govuk-link--no-visited-state'
             }
           ]

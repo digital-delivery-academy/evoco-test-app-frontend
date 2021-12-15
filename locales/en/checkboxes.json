@@ -5,10 +5,10 @@
     "label": "Choose your preference",
     "hint": "You must choose at least 3",
     "options": {
-      "twistedflax": "Twisted Flax",
-      "tworeeds": "Two Reeds",
-      "water": "Water",
-      "horus": "Horus"
+      "option1": "Option 1",
+      "option2": "Option 2",
+      "option3": "Option 3",
+      "option4": "Option 4"
     }
   },
   "errors": {

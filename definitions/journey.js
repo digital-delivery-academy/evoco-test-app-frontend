@@ -13,12 +13,11 @@ exports = module.exports = (function MyAppUserJourney() {
     'personal-details',
     'checkboxes',
     'contact-details',
+    'yes-no'
   );
 
-  plan.setRoute('contact-details', 'secret-agent', (e, c) => c.isPageValid('contact-details') && c.data['contact-details'].tel === '007');
-  plan.setRoute('contact-details', 'work-impact', (e, c) => c.isPageValid('contact-details') &&  c.data['contact-details'].tel !== '007');
-
-  plan.setRoute('secret-agent', 'work-impact');
+  plan.setRoute('yes-no', 'work-impact', (e, c) => c.isPageValid('yes-no') && c.data['yes-no'].moreDifficult === 'yes');
+  plan.setRoute('yes-no', 'review', (e, c) => c.isPageValid('yes-no') &&  c.data['yes-no'].moreDifficult == 'no');
 
   plan.addSequence(
     'work-impact',

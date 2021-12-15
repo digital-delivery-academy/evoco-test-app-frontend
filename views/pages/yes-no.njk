@@ -1,0 +1,30 @@
+{% extends "layouts/journey.njk" %}
+
+{% from "casa/components/radios/macro.njk" import casaGovukRadios with context %}
+{% from "casa/components/textarea/macro.njk" import casaGovukTextarea with context %}
+{% from "casa/components/character-count/macro.njk" import casaGovukCharacterCount with context %}
+
+{% block casaPageTitle %}
+  {{ t('yes-no:pageTitle') }}
+{% endblock %}
+
+{% block journey_form %}
+  <h1 class="govuk-heading-xl">
+    {{ t('yes-no:h1') }}
+  </h1>
+
+  {{ casaGovukRadios({
+    classes: "govuk-radios--inline",
+    name: 'moreDifficult',
+    items: [{
+      text: t('common:yes'),
+      value: 'yes'
+    }, {
+      text: t('common:no'),
+      value: 'no'
+    }],
+    casaValue: formData.moreDifficult,
+    casaErrors: formErrors
+  }) }}
+
+{% endblock %}

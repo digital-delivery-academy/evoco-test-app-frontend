@@ -1,0 +1,9 @@
+{
+  "pageTitle": "Work impact",
+  "h1": "Does your situation require assistance?",
+  "maxLength": "Give a shorter description (maximum 10,000 characters)",
+  "moreDifficult": {
+    "label": "Does your situation make things more difficult?",
+    "empty": "Please make a selection"
+  }
+}
