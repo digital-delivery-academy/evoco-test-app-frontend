@@ -11,9 +11,6 @@ exports = module.exports = (function() {
     view: 'pages/personal-details.njk',
     reviewBlockView: 'review-blocks/personal-details.njk',
     fieldValidators: require('./field-validators/personal-details'),
-    fieldGatherModifiers: {
-      title: (v) => (`${v.fieldValue}-mod`.replace(/(-mod)+$/g, '-mod')),
-    },
     fieldWriter: ({ formData, contextData }) => {
       contextData.person = formData;
       return contextData;

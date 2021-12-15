@@ -5,10 +5,10 @@
     "label": "Choose your preference",
     "hint": "You must choose at least 3",
     "options": {
-      "twistedflax": "Twisted Flax",
-      "tworeeds": "Two Reeds",
-      "water": "Water",
-      "horus": "Horus"
+      "twix": "Twix",
+      "timeout": "Timeout",
+      "doubleDecker": "Double Decker",
+      "breakaway": "Breakaway"
     }
   },
   "errors": {

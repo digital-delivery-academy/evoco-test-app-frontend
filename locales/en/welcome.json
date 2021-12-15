@@ -1,8 +1,15 @@
 {
-  "pageTitle": "Welcome",
-  "h1": "Welcome",
+  "pageTitle": "Evoco Technical Test",
+  "h1": "Evoco Technical Test",
   "html": {
-    "body": "<p class=\"govuk-body\">This small application provides a demonstration of the CASA (Collect And Send Application) framework.</p>"
+    "body":  "<p class=\"govuk-body\">This small technical test is so you can show off your automation skills. The task is to create automated tests using a language and framework of your choice.</p>
+            <p class=\"govuk-body\"> Complete the following tasks:
+            <ul class=\"govuk-list govuk-list--bullet\"> 
+            <li>Create as many automated tests as you see fit. Make sure you show good coding practices as this will be assessed</li>
+            <li>Push the tests to a git repository and provide us with the link</li>
+            <li>If any assumptions were made while choosing what to test provide that in an email</li>
+            </ul>
+            <p class=\"govuk-body\"> No data entered or submitted will be recorded or saved anywhere it is just an example application"
   },
   "btn": "Get Started"
 }
